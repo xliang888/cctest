@@ -7,7 +7,6 @@ jobs:
       - checkout # check out the code in the project directory
       - run: echo "hello world" # run the `echo` command
 
-jobs:
   build-android:
     docker:
       - image: circleci/android:api-25-alpha
