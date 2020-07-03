@@ -11,11 +11,17 @@ jobs:
       - image: circleci/android:api-25-alpha
     steps:
       - checkout # check out the code in the project directory
-      - run: echo "hello world" # run the `echo` command
+      - run: echo "hello Android" # run the `echo` command
 
   build-macos: 
     macos:  
       xcode: 11.3.0
     steps:
       - checkout # check out the code in the project directory
-      - run: echo "hello world" # run the `echo` command
+      - run: echo "hello macOs" # run the `echo` command
+
+  build-windows:
+    executor: win/vs2019
+    steps:
+      - checkout
+      - run: Write-Host 'Hello, Windows'
